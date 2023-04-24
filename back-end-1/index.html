@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Web Development</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="container">
+    <h1>Friends</h1>
+    <button id="button">GET Friends List</button>
+    <ul id="people" class=""></ul>
+    <h1>Friends</h1>
+    <button id="button-weather">GET Weather</button>
+    <h1 id="weather"></h1>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("button").onclick = function () {
+        axios
+          .get("http://localhost:4000/api/users")
+          .then(function (response) {
+            const data = response.data;
+            document.getElementById("people").innerHTML = data
+              .map(function (person) {
+                return '<li class="row">' + person;
+              })
+              .join("");
+          })
+          .catch(function (err) {
+            document.getElementById("people").innerHTML =
+              '<li class="text-danger">' + err.message + "</li>";
+          });
+      };
+      document.getElementById("button-weather").onclick = function () {
+        axios
+          .get(`http://localhost:4000/weather/${Math.floor(Math.random() * 100)}`)
+          .then(function (response) {
+            const data = response.data;
+            document.getElementById("weather").innerHTML = data
+          })
+          .catch(function (err) {
+            document.getElementById("weather").innerHTML =
+              '<li class="text-danger">' + err.message + "</li>";
+          });
+      };
+    </script>
+  </body>
+</html>
