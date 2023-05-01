@@ -1,0 +1,23 @@
+{
+  "name": "hashing",
+  "version": "1.0.0",
+  "description": "Implement password hashing for user registration.",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm-run-all -p nodemon browser-sync",
+    "nodemon": "nodemon server.js",
+    "browser-sync": "browser-sync start --proxy localhost:8000 --files=**/*  --ignore=node_modules --reload-delay 5000 --no-ui",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "browser-sync": "^2.28.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "nodemon": "^2.0.21",
+    "npm-run-all": "^4.1.5"
+  }
+}

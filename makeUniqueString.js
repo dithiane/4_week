@@ -17,8 +17,6 @@ For example:
 >>> makeUnique('iwanttoclimbamountain')
 // iwantoclmbu */
 
-//const unique = (str) => [...str].reduce((acc, cur, index, arr) => !arr.splice(index,1).includes(cur)? acc + cur : "", "" )
-
-const unique = (str) => [...new Set(str)].join("")
-console.log(unique('helloworld'))
-console.log(unique('iwanttoclimbamountain'))
+const makeUnique = (str) => [...new Set(str)].join("")
+console.log(makeUnique('helloworld'))
+console.log(makeUnique('iwanttoclimbamountain'))

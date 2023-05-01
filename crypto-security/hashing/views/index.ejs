@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashing | Login</title>
+    <style>
+      body { width: 60%; margin: 0 auto; }
+      .error { color: red; }
+      .success { color: green; }
+    </style>
+  </head>
+
+  <body>
+    <aside><%- message %></aside>
+
+    <header>
+      <h1>Login or Create a New Account</h1>
+      <p>&mldr;or try accessing <a href="/login/success">this restricted page</a> 🤫.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+          <div>
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" name="username">
+          </div>
+          <div>
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password">
+          </div>
+          <div>
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <h2>Create an Account</h2>
+        <form action="/register" method="POST">
+          <div>
+            <label for="register-username">New username</label>
+            <input type="text" id="register-username" name="username">
+          </div>
+          <div>
+            <label for="register-password">New Password</label>
+            <input type="password" id="register-password" name="password">
+          </div>
+          <div>
+            <button type="submit">Create Account</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+
+</html>

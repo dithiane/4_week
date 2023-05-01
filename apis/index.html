@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column; padding:  30px;">
+        <select name="questions" id="questions" style="margin: 10px">
+            <option value="">Select</option>
+            <option value="people/?search=">The height of the hero:</option>
+            <option value="planets?search=">The population of the planet:</option>
+            <option value="starships/?search=">The name of the manufacturer of the starships:</option>
+            <option value="people/?search=">The name of the species that ____ belongs to</option>
+            <option value="people/?search=">The title of each film that ____ is in </option>
+            <option value="starships/?search=">The Millennium Falcon, it’s a starship</option>
+            <option value="planets/?search=">All of the residents of the planet Alderaan listed out on the page.</option>
+        </select>
+        <input type="text" placeholder="" style="margin: 10px">
+        <button style="margin: 10px">Search</button>
+        <p id="variable1" style="margin: 10px"></p>
+        <div id="starShip" style="margin: 10px; display: flex; flex-direction: column;">
+        </div>
+    </div>
+
+
+
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
